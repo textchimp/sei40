@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Crockford</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Luke Hammer">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+<style>
+html.boom body {
+	background:url("img/boom.gif");
+	background-position:center;
+	background-size: 100%;
+}
+.justify{
+	text-align: justify;
+	padding: 1em !important;
+}
+</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		<!--
+		<img src="img/birdman.png" alt="" style="border:none;background:transparent;width:100px;float:right;box-shadow:none;position:absolute;bottom:10%;right:10%">
+-->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+       <section>
+				 <blockquote class="justify">
+         A computer is a general-purpose tool, maybe the most general-purpose tool that has ever been invented.
+				 </blockquote>
+				 <br>
+				  <blockquote class="justify  fragment">
+         A computer is a tool that can turn into/mimic/instantiate any other computing tool. On some level all computers are equivalent.
+				 </blockquote>
+				 <br>
+				  <blockquote class="justify  fragment">
+         A computer program is a tool which you create <span class="fragment highlight-green">just by describing it clearly enough</span>.
+				 </blockquote>
+
+			 </section>
+
+
+       <section>
+				 <blockquote class="justify">
+         Javascript is a language with more than its share of bad parts. It went from non-existence to global adoption in an alarmingly short period of time. It never had an interval in the lab when it could be tried out and polished. It went straight into Netscape Navigator 2 just as it was, and it was very rough. When Java applets failed, Javascript became the “Language of the Web” by default. <span class="fragment highlight-green">Javascript’s popularity is almost completely independent of its qualities as a programming language.</span>
+				 </blockquote>
+				 <p>&mdash; page 1</p>
+			 </section>
+
+			<section>
+				 <blockquote  class="justify">
+					 Fortunately, Javascript has some extraordinarily good parts. In JavaScript, there is a beautiful, elegant, highly expressive language that is <span class="fragment highlight-green">buried under a steaming pile of good intentions and blunders.</span> The best nature of Javascript is so effectively hidden that for many years the prevailing opinion of Javascript was that it was an unsightly, incompetent toy.
+				 </blockquote>
+				 <p>&mdash; page 2</p>
+			</section>
+
+<section>
+	 <blockquote  class="justify">
+The amazing thing about JavaScript is that it is possible to get work done with it without knowing much about the language, or even knowing much about programming. It is a language with enormous expressive power.
+	 </blockquote>
+	 <p>&mdash; page 2</p>
+</section>
+
+<section>
+	 <blockquote  class="justify" style="font-size: 20pt">
+There are those who will say <em>terrible</em> things about the JavaScript language.  <span class="fragment highlight-green">Many of these things are true.</span> When I was required to write something in JavaScript for the first time, I quickly came to despise it. It would accept almost anything I typed but interpret it in a way that was completely different from what I meant. This had a lot to do with the fact that I did not have a clue what I was doing, of course, but there is a real issue here: <span class="fragment highlight-green">JavaScript is ridiculously liberal in what it allows. The idea behind this design was that it would make programming in JavaScript easier for beginners. In actuality, it mostly makes finding problems in your programs harder because the system will not point them out to you.</span>
+	 </blockquote>
+	 <p style="font-size: 16pt"> &mdash; <em>Eloquent Javascript</em>, Marijn Haverbeke</p>
+</section>
+
+
+<section>
+	 <blockquote  class="justify">
+The best thing about JavaScript is its implementation of functions. It got almost everything right.  <span class="fragment">But, as you should expect with Javascript, it didn’t get everything right.</span>
+	 </blockquote>
+	 <p>&mdash; page 26</p>
+</section>
+
+
+<section>
+	 <blockquote  class="justify">
+JavaScript is much maligned for its choice of key ideas. For the most part, though, those choices were good, if unusual. But there was one choice that was particularly bad: Javascript depends on global variables for linkage. All of the top-level variables of all compilation units are tossed together in a common namespace called the global object. <span class="fragment highlight-green">This is a bad thing because global variables are evil, and in Javascript they are fundamental.</span> Fortunately, as we will see, Javascript also gives us the tools to mitigate this problem.
+</blockquote>
+	 <p>&mdash; page 3</p>
+</section>
+
+
+<section>
+<blockquote  class="justify">
+Programs must be written <span class="fragment highlight-green">for people to read</span>, and only incidentally <span class="fragment highlight-green">for machines to execute</span>.
+</blockquote>
+<small><p>&mdash; Harold Abelson, Structure and Interpretation of Computer Programs</p></small>
+</section>
+
+
+
+<section>
+	 <blockquote  class="justify">
+Generally, the craft of programming is the factoring of a set of requirements into a set of functions and data structures.
+ </blockquote>
+	 <p>&mdash; page 26</p>
+</section>
+
+
+<section>
+	 <blockquote  class="justify">
+ Deep down, Javascript has more in common with Lisp and Scheme than with Java. It is Lisp in C’s clothing. This makes Javascript a remarkably powerful language.
+ </blockquote>
+	 <p>&mdash; page 3</p>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
