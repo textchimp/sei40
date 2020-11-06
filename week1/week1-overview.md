@@ -1,5 +1,5 @@
 
-# Week 1 What Have We Learned?
+# Week 1: What Have We Learned?
 
 ## variables & data types
 - numbers (ints and floats), strings, booleans, undefined & null, functions, arrays, objects
