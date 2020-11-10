@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Position and Layout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>CSS Layout</h1>
+
+  <p>Let's do this</p>
+
+  <div class="inlineExample">
+    This element is <code>display: inline;</code>
+  </div>
+
+  <div class="inlineExample">
+    This element is also <code>display: inline;</code>
+  </div>
+
+  <div class="blockExample">
+    This element is <code>display: block;</code>
+  </div>
+
+  <div class="blockExample">
+    This element is also <code>display: block;</code>
+  </div>
+
+  <div class="inlineBlockExample">
+    This element is <code>display: inline-block;</code>
+  </div>
+
+  <div class="inlineBlockExample">
+    This element is also <code>display: inline-block;</code>
+  </div>
+
+  <div class="displayNoneExample">
+    This is <code>display: none;</code> so you won't see it at all, and it won't take up any space.
+  </div>
+
+  <p>This won't be affected by the display: none example above.</p>
+
+  <div class="visibilityHiddenExample">
+    This is <code>visibility: hidden;</code> so you won't see the contents, but it will take up the same space on the page as it would if it were visible.
+  </div>
+
+  <p>There will be empty space above this text because of the "visibility: hidden" example.</p>
+
+   <span>
+     <code>&lt;span&gt;</code> tags &copy; are generic container tags which are "inline" by default.
+   </span>
+
+   <span> See what I mean?</span>
+
+   <br><br>
+
+   <div class="box staticExample">
+     <strong>static (default):</strong>
+     <br>
+     the position is whatever the browser calculates for it in the page flow; you can't change it later with top/left CSS offsets
+   </div>
+
+   <div class="box relativeExample">
+     <strong>relative:</strong>
+     <br>
+     Offsets <em>do</em> work, and are calculated relative to the default (static) position in the page flow
+   </div>
+
+
+   <div class="box parentOfAbsolute">
+     (parent)
+     <div class="box absoluteExample">
+       <strong>absolute:</strong>
+       <br>
+       Offsets work, and are calculated relative to the nearest containing element (ancestor) which has a specific non-static position value set....
+       otherwise relative to the "body" (whole document)
+     </div>
+
+   </div><!-- div.parentOfAbsolute -->
+
+   <div class="box fixedExample">
+     <strong>fixed:</strong>
+     <br>
+     Offsets are calculated relative to the entire browser window (viewport) - i.e. the element does NOT move when you scroll the document
+   </div>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quaerat eaque aperiam consectetur dignissimos quas expedita maiores ea rem. Excepturi harum quasi similique, nam odio iusto, adipisci saepe illo enim?
+   </p>
+
+
+</body>
+</html>

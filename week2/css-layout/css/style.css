@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+  background-color: lavender;
+  font-family: Montserrat, Helvetica, sans-serif;
+  --headingGrey: orange; /* declare a variable */
+}
+
+code {
+  color: var(--headingGrey); /* use the variable */
+}
+
+strong {
+  color: var(--headingGrey);
+}
+
+div.inlineExample {
+  border: 1px solid red;
+  display: inline;
+  width: 20%; /* this will be ignored because it's inline */
+}
+
+div.blockExample {
+  border: 1px solid green;
+  display: block; /* this is the default */
+  width: 70%;
+  /* height: 200px; */
+}
+
+div.inlineBlockExample {
+  display: inline-block;
+  border: 1px solid blue;
+  width: 30%;
+  height: 60px;
+}
+
+div.displayNoneExample {
+  display: none;
+}
+
+div.visibilityHiddenExample {
+  visibility: hidden;
+}
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid var(--headingGrey);
+}
+
+.staticExample {
+  position: static;
+  left: 200px; /* this has no effect */
+}
+
+.relativeExample {
+  position: relative;
+  left: 50px;
+  top: 100px;
+}
+
+.absoluteExample {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.parentOfAbsolute {
+  position: relative;
+}
+
+.fixedExample {
+  position: fixed;
+  top: 200px;
+  right: 0px;
+}
+
+/*
+   This is like a conditional statement for
+   CSS rules: the following rules apply ONLY
+   when the browser screen is less than 400px
+   wide
+*/
+@media screen and (max-width: 600px) {
+
+  .inlineExample {
+    display: block !important;
+    font-weight: bold;
+  }
+
+}

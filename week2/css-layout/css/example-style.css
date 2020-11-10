@@ -1,0 +1,115 @@
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: darkslategray;
+  color: #AAAAAA;
+  margin: 0;
+}
+
+header {
+  /* border: 1px solid red; */
+  height: 60px;
+  background-color: lavender;
+  color: #333333;
+  padding: 6px;
+}
+
+header h1 {
+  display: inline;
+  font-size: 16pt;
+}
+
+header img{
+  margin-top: 6px;
+  margin-left: 5px;
+  /* TODO: look up how to do more reliable vertical centering */
+}
+
+.left, .right {
+  /* border: 1px solid yellow; */
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  text-align: right;
+}
+
+.right ul {
+  /* border: 1px dashed green; */
+  display: inline;
+  padding: 0;
+  padding-right: 4px;
+}
+
+.right a {
+  color: brown;
+  text-decoration: none;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+
+
+.right li {
+  /* border: 1px solid red; */
+  display: inline;
+  list-style-type: none;
+  /* padding-left: 4px; */
+  margin-left: 12px;
+}
+
+
+div.main {
+  /* border: 1px solid green; */
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  /* vertical-align: top; */
+}
+
+.sidebar, .content {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  padding: 4px;
+}
+
+.sidebar {
+  /* border: 1px solid red; */
+  width: 30%;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 80%;
+  margin: 8px auto;
+}
+
+.sidebar p {
+  text-align: justify;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.content {
+  /* border: 1px solid yellow; */
+  width: 70%;
+  padding-top: 12px;
+}
+
+.content img {
+  float: right;
+  transition: 2s;
+}
+
+.content img:hover {
+  transform: rotate(720deg) scale(10.0);
+  filter: hue-rotate(180deg);
+}
