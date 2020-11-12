@@ -1,0 +1,30 @@
+
+li, img.bordered, a {
+  border: 1px solid red;
+}
+
+p > strong {
+  color: #FF00FF;
+}
+
+p.larger {
+  font-size: 18pt;
+  border: 2px dashed yellow;
+}
+
+p {
+  font-size: 14pt;
+  background-color: hotpink;
+}
+
+#firstPara {
+  background-color: green;
+}
+
+form {
+  border: 2px solid red;
+}
+
+* {
+  border: 1px solid orange;
+}

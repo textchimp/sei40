@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Intro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <h1>Welcome to My Special Site With All My Thoughts and Feelings On It</h1>
+
+  <a class="larger" href="http://ga.co/" target="_blank">Sign My Guestbook</a>
+
+  <p id="firstPara">Thank you for visiting my page.</p>
+
+  <p>
+    Sorry if this is not as exciting as Javascript...
+    <br>
+    ...but you need to know it.          BELIEVE ME.
+  </p>
+
+  <p class="larger">
+    <em>Lorem ipsum dolor sit amet</em>, consectetur adipisicing elit. Explicabo similique velit, reiciendis ipsum repudiandae animi, earum sed laborum alias beatae iure! Tenetur perspiciatis, cupiditate. Consectetur et, repellendus quae sapiente minus!
+  </p>
+
+  <strong>This text is bold, but it's not inside a "p" tag.</strong>
+
+  <p class="larger">
+    <a>
+      <strong>network shanty town</strong> wristwatch decay sign urban j-pop vinyl man A.I.. rifle into Shibuya car tattoo hacker towards decay silent math-. BASE jump artisanal dead neon plastic girl industrial grade courier A.I. post-. office bridge shanty town tanto monofilament alcohol shanty town systemic crypto- table. physical rifle meta- denim Kowloon construct towards woman j-pop drugs. tanto cartel nano- bridge man Legba San Francisco j-pop garage motion.
+    </a>
+  </p>
+
+  <img src="http://www.fillmurray.com/300/200" alt="Bill Murray toasting with whiskey" id="mainImage">
+
+  <p>My Favourite Dogs:</p>
+
+  <ul>
+    <li>Ruby</li>
+    <li>Jess</li>
+    <li>Nookie</li>
+  </ul>
+
+  <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum aspernatur temporibus deleniti consectetur nihil iusto consequatur tempore architecto, dolore corrupti error debitis hic! Alias eveniet vel exercitationem, magni obcaecati dolores.
+  </blockquote>
+
+  <br>
+  Brandname &copy; <!-- "HTML entity" -->
+  <br>
+  Literal less-than sign &lt; , &gt;
+  <br>
+  Literal ampersand: &amp;
+  <br>
+  This & might work.
+  <br>
+
+  <pre>
+Line 1                           hi
+
+
+Line 2
+  </pre>
+
+  <p>
+     Here is some code: <code>const x = 1;</code> - this code creates a variable.
+  </p>
+
+  <a href="">Welcome to the</a><div>
+   Guestbook
+   <p>Sign it OR ELSE</p>
+ </div> after
+
+<!--
+span tags are inline
+div tags are block
+-->
+<span>Item 1</span><span>Item 2</span>
+
+<table>
+  <thead>
+    <th>Brother</th>
+    <td>Instrument</td>
+  </thead>
+
+  <tr>
+    <td>Groucho</td>
+    <td>Guitar</td>
+  </tr>
+
+  <tr>
+    <td>Harpo</td>
+    <td>Harp</td>
+  </tr>
+
+  <tr>
+    <td>Chico</td>
+    <td>Flute</td>
+  </tr>
+
+
+
+</table>
+
+<h2>Here comes a form!</h2>
+
+<form>
+  <!-- the container for grouping together all the form elements -->
+
+  <label>
+    First name:
+    <input type="text" placeholder="First name" name="first_name">
+  </label>
+  <br>
+  <textarea placeholder="hello?">
+Para 1
+  </textarea>
+
+  <br>
+  <label>
+    Dog breed:
+    <select>
+      <option value="1">Toller</option>
+      <option value="20">Labrador</option>
+      <option value="5">Pug</option>
+    </select>
+  </label>
+
+
+  <fieldset>
+
+    <legend>Select the preferred dog traits:</legend>
+
+    <label>
+      <input type="checkbox" name="traits" value="boundy"> Lots of bounding around
+    </label>
+
+    <br>
+
+    <label>
+      <input type="checkbox" name="traits" value="drool"> Prodigous slobbering
+    </label>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Select only one brother:</legend>
+
+    <label>
+      <input type="radio" name="bro" value="Groucho">
+      Groucho
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="bro" value="Chico">
+      Chico
+    </label>
+
+  </fieldset>
+
+  <input type="submit" value="Submit form">
+
+  <button>This also submits form</button>
+
+</form>
+
+
+<h4>Forbidden!!:</h4>
+<br>
+<br>
+<br>
+<b>Bold tag - use "strong" instead (deprecated).</b>
+<br>
+<i>Italics - use "em" instead.</i>
+<br>
+<blink>BLINK - SO ANNOYING! CSS animations?</blink>
+<br>
+<font size="16">Font tag - use CSS</font>
+<br>
+<span style="color: red;">Inline styles - use a separate CSS file instead.</span>
+<br>
+<center>This was once used to center text. Use CSS "text-align: center;" or "margin: 0 auto;"</center>
+
+<!--
+<marquee direction="down">
+  WHY IS THIS NOT ALLOWED THIS IS THE BEST TAG. But don't worry, we can always recreate it with CSS animations.
+</marquee> -->
+
+<!-- End of banned list. -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
