@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+
+
+<meta charset=utf-8 />
+<title>GDI jQuery Pt 2</title>
+<meta name="viewport" content="width=device-width">
+<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+<style>
+body {
+  padding: 0;
+  margin: 0;
+
+  background: #3FA8C6;
+  background-image: -moz-linear-gradient(top, #3fa8c6 0%, #3fa8c6 0%, #399ab2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3fa8c6), color-stop(0%,#3fa8c6), color-stop(100%,#399ab2));
+  background-image: -webkit-linear-gradient(top, #3fa8c6 0%,#3fa8c6 0%,#399ab2 100%);
+  background-image: -o-linear-gradient(top, #3fa8c6 0%,#3fa8c6 0%,#399ab2 100%);
+  background-image: -ms-linear-gradient(top, #3fa8c6 0%,#3fa8c6 0%,#399ab2 100%);
+  background-image: linear-gradient(to bottom, #3fa8c6 0%,#3fa8c6 0%,#399ab2 100%);
+  color: #fff;
+
+  font-family: 'Doppio One', sans-serif;
+  text-shadow: 0 1px 0 rgba(0,0,0,.3);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.03em;
+  font-size: 2em;
+}
+
+a {
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+  padding-bottom: 0.15em;
+  position: relative;
+
+  color: white;
+  text-decoration: none;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: rgba(0,0,0,.1);
+}
+
+a:hover {
+  color: #C0E3EC;
+}
+
+h1 {
+  margin: 0.667em 0 0;
+  padding-left: 0.5em;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+small {
+  margin-top: 1em;
+  display: block;
+  font-style: italic;
+  font-size: 0.667em;
+}
+
+p em {
+  font-style: none;
+}
+
+#welcome {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1em;
+  padding-left: 20px;
+}
+
+#welcome > div {
+  padding-top: 1px;
+}
+
+#kitty {
+  float: left;
+  margin: 3em
+}
+
+#welcome > h2 {
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  margin-bottom: 0;
+}
+
+.bubble p {
+  line-height: 22px;
+}
+
+.bubble {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+
+  padding: 0.667em 1em;
+  position: relative;
+}
+
+.bubble:after {
+  content: "";
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+  border-right-color: inherit;
+  top: 50px;
+  left: -20px;
+}
+
+#features {
+  margin: 0.444em 0 0;
+  clear: both;
+}
+
+#features > h2 {
+  margin: 0;
+}
+
+#features ol {
+  position: relative;
+  padding: 1em 0 1.5em;
+  background: rgba(0,0,0,.1);
+  border-color: rgba(0,0,0,.1);
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+  counter-reset: item;
+}
+
+#features li {
+  width: 30%;
+  padding: 0 1.5%;
+  float: left;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#features li h2 {
+  display: block;
+  padding: 1em;
+  margin: 0.667em auto 1em;
+  font-size: 1em;
+
+  line-height: 1em;
+  text-align: center;
+
+  background: rgba(0,0,0,.1);
+  border-radius: 2em;
+  box-shadow: inset 0 0 1em rgba(0,0,0,.1), 0 2px 2px rgba(255,255,255,.1);
+}
+
+#next > div {
+  width: 45%;
+  float: left;
+  padding: 0 2.5%;
+}
+
+/* img {
+  z-index: 1;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+ -moz-transition: -moz-transform 2s ease-in-out;
+ -o-transition: -o-transform 2s ease-in-out;
+ -ms-transition: -ms-transform 2s ease-in-out;
+ transition: transform 2s ease-in-out;
+ position: relative;
+}
+ */
+/* img:active {
+  -webkit-transform: rotate(1440deg) scale(1.2);
+  -moz-transform: rotate(1440deg) scale(1.2);
+  -o-transform: rotate(1440deg) scale(1.2);
+  -ms-transform: rotate(1440deg) scale(1.2);
+  transform: rotate(1440deg) scale(1.2);
+} */
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: auto;
+    margin: 0;
+  }
+  #welcome {
+    margin-right: 2.5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    text-align: center;
+  }
+  #dave {
+    float: none;
+  }
+
+  #welcome {
+	padding: 0 1.5em;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 1.8em;
+  }
+  #welcome > h2 {
+    margin-bottom: 0.667em;
+  }
+  .bubble {
+    text-align: center;
+  }
+  .bubble:after {
+    display: none;
+  }
+  #features li {
+    width: 47%;
+  }
+  #features li:last-child {
+    float: none;
+    clear: both;
+    margin: 0 auto;
+  }
+
+  #next > div {
+    float none;
+    width: auto;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <img id="kitty" src="http://placekitten.com/200/200">
+
+    <div id="welcome">
+      <h1>Girl Develop It!</h1>
+      <marquee><h2> Events </h2></marquee>
+      <ul><strong>Keyboard Events</strong>
+        <li class="keydown">'keydown' </li>
+        <li class='keypress'>'keypress' </li>
+        <li class='keyup'>'keyup' </li>
+      </ul>
+    <ul> <strong>Mouse Events</strong>
+        <li class='click'> 'click'</li>
+        <li class='mousedown'>'mousedown'</li>
+        <li class='mouseup'>'mouseup'</li>
+        <li class='mousemove'>'mousemove'</li>
+    </ul>
+    <ul> <strong> Form Events </strong>
+      <li> 'change'</li>
+      <li> 'focus' </li>
+      <li> 'blur' </li>
+    </ul>
+    </div>
+
+    <div id="features">
+      <ol>
+        <li>
+          <h2 id="toggle">Toggle</h2>
+          <img class="triple-kitty1" src="http://placekitten.com/100">
+        <img class="triple-kitty1" style="display: none" src="http://placekitten.com/90"></li>
+        <li>
+          <h2 id="fade">Fade</h2><img class="triple-kitty2" src="http://placekitten.com/110"></li>
+        <li id="show"><h2>Show</h2><img style="display:none;" class="triple-kitty3" src="http://placekitten.com/120"></li>
+      </ol>
+    </div>
+
+    <div id="next">
+      <div>
+        <h2>Form</h2>
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder=""></input>
+          <input type="submit" value="go"></input>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
