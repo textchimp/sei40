@@ -1,0 +1,11 @@
+
+body {
+  background-color: black;
+  margin: 0;
+  overflow: hidden; /* no scrollbars! */
+}
+
+div.blob {
+  position: absolute;
+  border-radius: 50%;
+}
