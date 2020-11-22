@@ -1,0 +1,98 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: black;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  #header {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 8vh;
+  }
+
+  #main div {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .pad{
+    vertical-align: top;
+    width: 30vw;
+    font-size: 3vh;
+    overflow: hidden;
+  }
+
+  #scores div {
+    display: block;
+  }
+
+  #game-container {
+    width: 39vw;
+    height: 40vw;
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  .cell {
+    cursor: pointer; /* Mouse pointer looks like link pointer, to indicate clickable */
+    width: 33%;
+    height: 33%;
+    border: 1px solid green;
+    font-size: 14vmax; /* higher of vw or vh */
+    line-height: 95%;
+  }
+
+  .celebrate{
+    animation: filter-animation 2s linear infinite, spin-animation 4s linear infinite;
+    border: 0;
+  }
+
+  @keyframes filter-animation {
+    0%   { color: hsl(0,   100%, 50%); }
+    50%  { color: hsl(120, 100%, 50%); }
+    75%  { color: hsl(240, 100%, 50%); }
+    100% { color: hsl(360, 100%, 50%); }
+  }
+
+  @keyframes spin-animation {
+    0%   { transform:rotate(0deg)   scale(1); }
+    50%  { transform:rotate(180deg) scale(12); }
+    100% { transform:rotate(360deg) scale(1); }
+  }
+
+  /* MOBILE: Move scoreboard and reset button columns to above and below board on small screens */
+  /* Note that these media rules must appear BELOW any default rules they want to override */
+  @media (max-width:750px){
+
+    * {
+      user-select: none; /* prevent text selection on mobile touchscreens */
+    }
+
+    .pad {
+      display: block;
+      width: 100vw;
+    }
+
+    #scores div {
+      display: inline-block; /* fit score info onto single row to save space */
+      padding: 10px 4vw;
+    }
+
+    #game-container {
+      display: block !important;
+      margin: 2vh auto;
+      width: 90vw;
+      height: 90vw;
+    }
+
+    .cell {
+      font-size: 30vw;
+      line-height: 100%;
+    }
+
+  } /* end of media query rules */

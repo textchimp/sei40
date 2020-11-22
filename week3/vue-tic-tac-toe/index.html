@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TTT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header">FUN GAME</div>
+<div id="main">
+  <div class="pad" id="scores">
+    <div>Moves: {{moveCount}}</div>
+    <div>X wins: {{score.X}}</div>
+    <div>O wins: {{score.O}}</div>
+  </div><div id="game-container">
+    <!-- v-for can also just count up for you, instead looping over arrays and objects -->
+    <div v-for="i in 9" v-on:click="playMove(i-1)" class="cell" v-bind:class="getCellWin(i-1)">
+      {{ board[i-1] || '&nbsp;' }}
+    </div>
+  </div><div class="pad">
+    {{ winMessage }}
+    <br><br>
+    <button v-if="winMessage" v-on:click="restartGame">Restart</button>
+  </div>
+</div><!-- main -->
+
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
