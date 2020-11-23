@@ -16,7 +16,9 @@ suburb = gets.chomp.downcase
 # else
 #   puts "I'm sure it's very nice there."
 # end
- 
+
+# Most if-else-if chains can be turned into cleaner case statements:
+#
 # case suburb
 # when "bondi"   then puts "Nice boat shoes"
 # when "manly"   then puts "Surf's up bro! Watch out for tourists"
@@ -24,6 +26,13 @@ suburb = gets.chomp.downcase
 # else                puts "I'm sure it's very nice there."
 # end
 
+# But since if and case statements also return values in Ruby,
+# we can make this even more minimal: case statements evaluate
+# to (return/spit out/boil down to) the value of the last line
+# in the block that actually gets run. So we can 
+# get this case statement to create a mapping, returning a
+# specific output string when it sees a specific input string.
+# (You can also use objects ("hashes") to do this!)
 result = case suburb
 when "bondi"   then "Nice boat shoes"
 when "manly"   then "Surf's up bro! Watch out for tourists"
