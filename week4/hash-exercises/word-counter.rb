@@ -4,7 +4,7 @@ text = "The dogs are happy and running in the park. The owners are watching the 
 # split the single string into an array of words on the space character
 words = text.split ' '
 
-# create our empty word frequency table
+# create our empty word frequency table - default value to 0 !
 word_freq = Hash.new( 0 )
 
 # words.select! { |word| word.length > 2 }
@@ -20,6 +20,7 @@ words.each do |word|
   #  if no, create a new key and initialise the value to 1
 
   # puts "Processing word: #{ word }: #{ word_freq[word] }"
+  require 'pry'; binding.pry
 
   if word.length > 2
     word_freq[ word ] += 1
@@ -40,3 +41,5 @@ end # words.each
 word_freq.each do |word, freq|
   puts "#{word}: #{freq}"
 end
+
+# One liner for this whole thing?
