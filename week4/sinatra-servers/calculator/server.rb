@@ -17,6 +17,21 @@ end
 
 # 2. Define a route that the form is submitted to, which
 # processes the form data, and prints a results page
+get '/calc/result' do
+  @first = params[:firstnum].to_i
+  @op = params[:operator]
+  @second = params[:secondnum].to_i
+
+  if @op == '+'
+    @result = @first + @second
+  end
+
+  erb :answer
+
+end
+
+
+
 
 
 get '/calc/:first_num/:op/:second_num' do
