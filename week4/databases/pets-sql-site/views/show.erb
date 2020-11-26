@@ -1,0 +1,30 @@
+
+<h2>Pet: <%= @pet['name'] %></h2>
+
+<p>
+  <strong>Species:</strong> <%= @pet['species'] %>
+</p>
+
+<p>
+  <strong>Description:</strong> <%= @pet['description'] %>
+</p>
+
+<p>
+  <strong>Roundness:</strong> <%= @pet['roundness'] %>
+</p>
+
+<p>
+  <strong>Alive:</strong> <%= @pet['alive'] == 1 ? 'yes' : 'no' %>
+</p>
+
+<p>
+  <strong>Age:</strong> <%= @pet['age'] %>
+</p>
+
+<img src="<%= @pet['image_url'] %>" alt="Portrait of <%= @pet['name'] %>">
+
+<br>
+
+<a href="/pets/<%= @pet['id'] %>/edit">Edit This Pet</a>
+|
+<a href="/pets/<%= @pet['id'] %>/delete">Delete This Pet</a>

@@ -1,0 +1,21 @@
+
+
+<h2>Index of Pets</h2>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <a href="/pets/<%= pet['id']  %>">
+        <%= pet['name'] %>
+      </a>
+      (<%= pet['roundness'] %>)
+      -
+      <% if pet['alive'] == 1 %>
+        alive
+      <% else %>
+        ded
+      <% end %>
+
+    </li>
+  <% end %>
+</ul>
