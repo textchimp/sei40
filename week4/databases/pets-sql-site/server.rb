@@ -1,5 +1,4 @@
 
-#test 2
 require 'sqlite3'
 require 'sinatra'
 require 'sinatra/reloader'
