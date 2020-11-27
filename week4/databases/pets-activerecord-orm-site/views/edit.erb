@@ -1,0 +1,50 @@
+
+<h1>Edit Pet: <%= @pet.name %></h1>
+
+<form action="/pets/<%= @pet.id %>" method="post">
+
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= @pet.name %>">
+  </label>
+  <br>
+
+  <label>
+    Species:
+    <input type="text" name="species" value="<%= @pet.species %>">
+  </label>
+  <br>
+
+  <label>
+    Description:
+    <textarea name="description"><%= @pet.description %></textarea>
+  </label>
+  <br>
+
+  <label>
+    Roundness:
+    <input type="text" name="roundness" value="<%= @pet.roundness %>">
+  </label>
+  <br>
+
+  <label>
+    Alive (1 for yes, 0 for no):
+    <input type="text" name="alive" value="<%= @pet.alive %>">
+  </label>
+  <br>
+
+  <label>
+    Age:
+    <input type="text" name="age" value="<%= @pet.age %>">
+  </label>
+  <br>
+
+  <label>
+    Image URL:
+    <input type="text" name="image_url" value="<%= @pet.image_url %>">
+  </label>
+  <br>
+
+  <input type="submit" value="Update Pet">
+
+</form>
