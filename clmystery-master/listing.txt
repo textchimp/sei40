@@ -1,0 +1,18 @@
+total 512
+-rw-r--r--@ 1 textchimp  staff    1073  8 Jun 11:42 LICENSE.md
+-rw-r--r--@ 1 textchimp  staff    2668  8 Jun 11:42 README.md
+-rw-r--r--@ 1 textchimp  staff   13844  8 Jun 11:42 cheatsheet.md
+-rw-r--r--@ 1 textchimp  staff  189042  8 Jun 11:42 cheatsheet.pdf
+-rw-r--r--@ 1 textchimp  staff    1064  8 Jun 11:42 encoded
+-rw-r--r--@ 1 textchimp  staff     146  8 Jun 11:42 hint1
+-rw-r--r--@ 1 textchimp  staff      88  8 Jun 11:42 hint2
+-rw-r--r--@ 1 textchimp  staff     187  8 Jun 11:42 hint3
+-rw-r--r--@ 1 textchimp  staff     183  8 Jun 11:42 hint4
+-rw-r--r--@ 1 textchimp  staff     280  8 Jun 11:42 hint5
+-rw-r--r--@ 1 textchimp  staff     272  8 Jun 11:42 hint6
+-rw-r--r--@ 1 textchimp  staff     329  8 Jun 11:42 hint7
+-rw-r--r--@ 1 textchimp  staff     473  8 Jun 11:42 hint8
+-rw-r--r--@ 1 textchimp  staff    2559  8 Jun 11:42 instructions
+-rw-r--r--  1 textchimp  staff       0  2 Nov 17:28 listing.txt
+drwxr-xr-x@ 8 textchimp  staff     256  8 Jun 11:42 mystery
+-rw-r--r--@ 1 textchimp  staff    1085  8 Jun 11:42 solution

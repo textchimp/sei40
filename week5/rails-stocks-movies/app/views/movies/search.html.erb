@@ -1,0 +1,18 @@
+
+<h2>
+  Search results for "<%= params[:search_text] %>"
+</h2>
+
+<ol>
+<% @movies['results'].each do |movie| %>
+  <li>
+    <strong><%= movie['title'] %></strong>
+    <br>
+    <%= movie['overview'] %>
+    <br>
+    <img src="http://image.tmdb.org/t/p/w185<%= movie['poster_path'] %>" alt="<%= movie['title'] %>">
+  </li>
+<% end %>
+</ol>
+
+<%= @movies['results'].first %>

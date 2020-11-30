@@ -1,4 +1,4 @@
-console.log('GA Bank! Give us your money!!!');
+// console.log('GA Bank! Give us your money!!!');
 
 // JavaScript Bank
 // In this homework, you'll create a basic bank in Javascript. The bank has many accounts and the following capabilities that you need to write.
@@ -87,13 +87,161 @@ const bank = {
 
   withdraw: function( accountName, amount ){
     // YOUDO
-  };
+  }
 
 
 }; // bank object
 
 
-const total = bank.getBankGrandTotal(); // test it!
+// const total = bank.getBankGrandTotal(); // test it!
+//
+// bank.deposit( 'Ruby', 500 ); // should work
+// bank.deposit( 'Luke', 500 ); // should give an error (no such account)
 
-bank.deposit( 'Ruby', 500 ); // should work
-bank.deposit( 'Luke', 500 ); // should give an error (no such account)
+//
+// lines = {
+//   'N': ['a', 'b', 'c'],
+//   '6': []
+// }
+//
+// for( let i = 0; i < lines[startLine].length; i++ ){
+//
+// }
+//
+// const singleLineTrip = function( line, startStation, endStation ){
+//
+// };
+
+
+// Pseudocode
+
+// 1. Get the user's choice of line, first station, second station
+
+// singleLineTrip( 'N', '8th', 'Union Square' )
+
+// 2. From the line name, get the array of stations for that line
+
+
+// Functions
+
+
+// simplest version: no arguments, no return value
+
+let answer;  // global variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const sayHello = function(){
+  // lines of code go here
+  console.log('Hello!');
+  return 'Goodbye';   // changing global variable
+
+  // return undefined;  // this is the JS default
+};
+
+// const answer = sayHello();
+
+
+// function which takes one argument:
+const sayHelloToSomeone = function( personName, times ){
+  console.log(`Hello, ${personName}`);
+  return `It was nice to meet you, ${personName}`;
+}; // sayHelloToSomeone()
+
+
+// sayHelloToSomeone( 'Andy' );
+// sayHelloToSomeone( 'Bruna' );
+// sayHelloToSomeone( 'David' );
+
+// const saturday = sayHelloToSomeone('David');
+// console.log( saturday );
+
+// function with two arguments, and return value:
+const addNums = function( x, y ){
+  console.log(`addNums(): x is ${x}, y is ${y}`);
+
+  const sum = x + y;
+
+  console.log(`The sum is ${sum}`);
+
+  console.log(x, y, sum);
+
+  return sum;
+
+
+
+}; // addNums()
+
+
+// const line = [ 'a', 'b', 'c', 'd' ];
+
+const mta = {
+
+  N: {
+    'a st': {
+      name: 'Station A St',
+      mananger: 'some guy',
+      trainCount: 10
+
+    },
+    b: {
+
+    }
+  },
+
+  N: [
+    { name: 'a', mananger: 'guy'},
+    { name: 'b', mananger: 'guy'},
+  ],
+
+  L: ['d', 'e', 'f'],
+  6: ['g', 'h', 'i']
+
+};
+
+
+const singleLineTrip = function( lineName, start, end ){
+  console.log(mta);
+};
+
+
+// singleLineTrip('N', '8th', 'Times Square');
+
+// arrays vs objects:
+
+// both are for storing multiple items, i.e. they are
+// 'containers' or 'collections'
+
+// ARRAYS:
+//   - when you care about the order of your items
+//   - and, you don't mind using numbers to index the items
+//   - you don't mind looping through the array to find an item
+//    ( or maybe use .indexOf() )
+//   - to loop: use  a for()
+
+
+// OBJECTS:
+//   - when you DON'T care about the order of the items,
+//   - but you need to able to look items up by string index
+//   - to loop: for..in:  for(const key in myObject){}
