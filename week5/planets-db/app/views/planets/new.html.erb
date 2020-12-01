@@ -1,0 +1,30 @@
+
+<h2>Add New Planet</h2>
+
+<!-- <form> -->
+<%= form_with model: @planet, local: true do |f|  %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :mass %>
+  <%= f.text_field :mass %>
+  <br>
+
+  <%= f.label :orbit %>
+  <%= f.text_field :orbit %>
+  <br>
+
+  <%= f.label :moons %>
+  <%= f.text_field :moons %>
+  <br>
+
+  <%= f.label :image_url, 'Image URL' %>
+  <%= f.text_field :image_url %>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>
+<!-- </form> -->

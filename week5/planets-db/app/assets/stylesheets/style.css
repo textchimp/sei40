@@ -1,0 +1,14 @@
+
+body {
+  background-color: black;
+  font-family: Helvetica;
+  color: rgb(158, 178, 189);
+}
+
+a:visited {
+  color: blue;
+}
+
+img {
+  max-width: 500px;
+}

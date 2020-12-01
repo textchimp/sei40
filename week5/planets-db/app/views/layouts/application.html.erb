@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlanetsDb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <nav>
+      <h1>Tour of the Solar System</h1>
+
+      <!-- <a href="<%= planets_path %>">All Planets</a> -->
+      <%= link_to 'All Planets', planets_path %>
+      |
+      <%= link_to 'Create Planet', new_planet_path %>
+
+      <hr>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+      <hr>
+      &copy Star Child Productions 2020
+    </footer>
+
+  </body>
+</html>

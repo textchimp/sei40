@@ -1,0 +1,23 @@
+
+<h2>Index of Planets</h2>
+
+<ul>
+  <% @planets.each do |p|  %>
+    <li>
+    <!--
+      Instead of directly using a URL like '/planets/9'
+      Rails encourages you to use a helper method whiche
+      will give you the URL, based on what is in your
+      routes.rb file; this is supposed to dry up your templates
+     -->
+
+     <%= link_to p.name, planet_path(p.id) %>
+
+     <!--
+      <a href="<%= planet_path( p.id ) %>">
+        <%= p.name %>
+      </a> -->
+
+    </li>
+  <% end %>
+</ul>
