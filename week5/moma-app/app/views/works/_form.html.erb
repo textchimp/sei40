@@ -1,0 +1,26 @@
+
+<%= form_with model: @work, local: true do |f| %>
+
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br><br>
+
+  <%= f.label :year %><br>
+  <%= f.text_field :year %><br><br>
+
+  <%= f.label :medium %><br>
+  <%= f.text_field :medium %><br><br>
+
+  <%= f.label :style %><br>
+  <%= f.text_field :style %><br><br>
+
+  <%= f.label :image, 'Image URL' %><br>
+  <%= f.text_field :image %><br><br>
+
+  <!-- TODO: should be a dropdown! The users don't know the IDs! -->
+  <!-- Research 'collection_select' helper -->
+  <%= f.label :artist_id %><br>
+  <%= f.text_field :artist_id %><br><br>
+
+  <%= f.submit %>
+
+<% end %>

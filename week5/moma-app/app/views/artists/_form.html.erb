@@ -1,0 +1,41 @@
+
+<%= form_with model: @artist, local: true do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br><br>
+
+  <%= f.label :nationality %>
+  <br>
+  <%= f.text_field :nationality %>
+  <br><br>
+
+  <%= f.label :dob, 'Date of Birth' %>
+  <br>
+  <%= f.date_field :dob %>
+  <br><br>
+
+  <%= f.label :period %>
+  <br>
+  <%= f.text_field :period %>
+  <br><br>
+
+  <%= f.label :roundness %>
+  <br>
+  <%= f.text_field :roundness %>
+  <br><br>
+
+  <%= f.label :bio %>
+  <br>
+  <%= f.text_field :bio %>
+  <br><br>
+
+  <%= f.label :image %>
+  <br>
+  <%= f.text_field :image %>
+  <br><br>
+
+  <%= f.submit %>
+
+<% end %>

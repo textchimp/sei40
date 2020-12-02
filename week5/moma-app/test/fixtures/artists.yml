@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  nationality: MyString
+  dob: 2020-12-02
+  period: MyString
+  image: MyText
+  roundness: 1
+  bio: MyText
+
+two:
+  name: MyString
+  nationality: MyString
+  dob: 2020-12-02
+  period: MyString
+  image: MyText
+  roundness: 1
+  bio: MyText

@@ -1,0 +1,14 @@
+
+<h2>Index of Artists</h2>
+
+<ul>
+<!-- each loop over @artists! -->
+<% @artists.each do |artist| %>
+  <li>
+    <!--
+     <a href="/artists/<%= artist.id %>"> <%= artist.name %>  </a>
+    -->
+    <%= link_to artist.name, artist_path(artist.id) %>
+  </li>
+<% end %>
+</ul>
