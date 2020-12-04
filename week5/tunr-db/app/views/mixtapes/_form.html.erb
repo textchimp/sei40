@@ -1,0 +1,14 @@
+
+<%= form_with model: @mixtape, local: true do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>

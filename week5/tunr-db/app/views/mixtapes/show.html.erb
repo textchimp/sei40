@@ -2,6 +2,10 @@
   Mixtape: <%= @mixtape.title %>
 </h2>
 
+<% if @mixtape.user_id == @current_user.id %>
+  <%= link_to 'Edit Mixtape', edit_mixtape_path(@mixtape.id) %>
+<% end %>
+
   <p>
     <strong>Created by:</strong>
     <%= @mixtape.user.name %>
