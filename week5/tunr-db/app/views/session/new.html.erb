@@ -1,0 +1,27 @@
+
+<h2>Login</h2>
+
+<% if flash[:error] %>
+  <%# Print out an error message, if the SessionController set one %>
+  <br>
+  <strong>
+    <%= flash[:error] %>
+  </strong>
+  <br>
+  <br>
+<%  end %>
+
+<%# We can also use form_with for generic forms, i.e. forms not connected to a model - to do this, we use 'url: someurl' instead of 'model: @somemodel'  %>
+<%= form_with url: login_path, local: true do |f| %>
+
+  <%= f.label :email %><br>
+  <%= f.text_field :email %><br>
+  <br>
+
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+  <br>
+
+  <%= f.submit 'Login' %>
+
+<% end %>

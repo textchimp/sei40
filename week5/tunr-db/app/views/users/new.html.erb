@@ -1,0 +1,17 @@
+<h2>Create an Account</h2>
+
+<!-- TODO: use form partial -->
+
+<%= form_with model: @user, local: true do |f| %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+
+  <%= f.submit 'Sign Up' %>
+
+<% end %>
