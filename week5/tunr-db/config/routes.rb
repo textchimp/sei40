@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   # like get '/' => 'pages#home'
   root to: 'pages#home'
 
@@ -19,6 +20,9 @@ Rails.application.routes.draw do
 #           PATCH  /users/:id(.:format)      users#update
 #           PUT    /users/:id(.:format)      users#update
 #           DELETE /users/:id(.:format)      users#destroy
+
+
+  resources :mixtapes
 
 
 end # routes above here!
