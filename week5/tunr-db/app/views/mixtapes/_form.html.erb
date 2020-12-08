@@ -1,12 +1,12 @@
 
-<%= form_with model: @mixtape, local: true do |f| %>
+<%= form_with model: @mixtape, local: true, html: { multipart: true } do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br>
 
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.file_field :image %>
   <br>
 
   <%= f.submit %>

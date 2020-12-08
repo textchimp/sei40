@@ -16,6 +16,16 @@ class MixtapesController < ApplicationController
     # the column attributes filled in from the form params... but not saved to DB
     mixtape = Mixtape.new mixtape_params
     mixtape.user_id = @current_user.id # this mixtape belongs to the logged-in user
+
+    # Check for file upload and handle upload if present
+    if params[:mixtape][:image].present?
+      # Forward the uploaded image file on to Cloudinary (using the gem):
+      response = Cloudinary::Uploader.upload params[:mixtape][:image]
+      p response
+      # save response ID into the appropriate field of our new model object:
+      mixtape.image = response["public_id"]
+    end
+
     mixtape.save  # actually do DB 'INSERT'
 
     # Add the user ID to this mixtape
@@ -54,7 +64,7 @@ class MixtapesController < ApplicationController
     # redirect_to login_path and return unless mixtape.user_id == @current_user.id
     if mixtape.user_id != @current_user.id
       redirect_to login_path
-      return
+      return # stop the update from happening! (redirect_to doesn't stop the rest of this method's code from running)
     end #if
 
     mixtape.update mixtape_params # strong params

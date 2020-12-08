@@ -54,3 +54,5 @@ end
 # gem 'tzinfo-data'
 
 gem 'pry-rails' # pry for rails console
+
+gem 'cloudinary'
