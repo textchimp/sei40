@@ -1,0 +1,9 @@
+<div id="heading">Fruits of the World</div>
+
+<ul>
+<% @fruits.each do |fruit| %>
+  <li class="item">
+    <%= fruit.name %>
+  </li>
+<% end %>
+</ul>

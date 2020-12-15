@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieDB Search</title>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+
+  <style>
+    h3 {
+      /* make the h3 tags look like links */
+      cursor: pointer;
+    }
+    h3:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Movie Search</h1>
+
+  <input type="text" id="searchText" placeholder="Type movie name" value="aliens" >
+  <button id="doSearch">Search</button>
+
+
+  <div id="results"></div>
+
+  <div id="details"></div>
+
+</body>
+</html>

@@ -2,6 +2,8 @@ class Fruit < ApplicationRecord
 
   belongs_to :shelf #, optional: true
 
+  validates :name, presence: true
+
   # "Fruit (and derived models) is not squishy by default"
   def squishy?
     false
