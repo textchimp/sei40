@@ -1,0 +1,33 @@
+
+#results img {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#pagination {
+  display: none;
+  margin: 20px 0;
+}
+
+#details {
+  display: none;
+  position: fixed; /* always visible, ignores scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#title{
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 16pt;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Intro</title>
+
+  <style>
+    .allgood {
+      background-color: green;
+    }
+    .error {
+      background-color: red;
+    }
+  </style>
+
+</head>
+<body>
+   <h1>Vue Intro</h1>
+
+   <!-- Vue can only "see" or change this section of the page -->
+   <div id="app">
+
+     <dog-info name="Ruby" roundness="3"></dog-info>
+     <dog-info name="Winnie" roundness="4"></dog-info>
+
+     <!--
+     <img v-for="url in bills" v-bind:src="url">
+   -->
+
+     <ul>
+       <li v-for="item in todoList">
+         {{ item.text }}
+       </li>
+     </ul>
+
+     <p  v-bind:title="secretGreeting" @mouseover="reverseMessage">
+       {{ message }}
+     </p>
+
+    <button v-on:click="changeMessage"> Click me! </button>
+
+    <br><br>
+
+    <input type="text" v-model="message">
+
+    <br><br>
+
+    <div v-if="showDiv" v-bind:class="errorStatus">
+      <strong>This message will appear and disappear.</strong>
+    </div>
+
+   </div>
+   <!-- end of div#app, i.e. end of what Vue can see -->
+
+  <script src="js/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
