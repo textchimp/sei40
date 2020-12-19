@@ -79,7 +79,8 @@ const getSearchResults = (queryText, pageToLoad=1) => {
 
   $.getJSON(FLICKR_BASE_URL, {
     api_key: FLICKR_API_KEY,
-    method: 'flickr.photos.search',
+    // method: 'flickr.photos.search',
+    method: 'flickr.photos.getPopular',
     text: queryText,
     format: 'json',
     nojsoncallback: 1,
@@ -140,14 +141,14 @@ const getPhotoDetails = (id) => {
     $('#title').html(`
       ${data.photo.title._content}
       <br>
-      ${data.photo.description._content}  
+      ${data.photo.description._content}
     `);
 
     $('#details')
       .css({
         background: `url(${ url })`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'auto'
       })
       .fadeIn();
 
