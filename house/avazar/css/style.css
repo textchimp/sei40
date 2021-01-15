@@ -1,0 +1,12 @@
+body {
+  text-align: center
+}
+
+#lay {
+  height: 70vh;
+}
+
+input {
+  position: relative;
+  top: 4px;
+}

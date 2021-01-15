@@ -46,6 +46,7 @@ class MixtapesController < ApplicationController
   end
 
   def index
+    @mixtapes = Mixtape.all
   end
 
   def show
