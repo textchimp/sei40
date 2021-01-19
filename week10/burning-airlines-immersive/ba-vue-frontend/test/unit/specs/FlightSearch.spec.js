@@ -3,6 +3,8 @@ import { mount } from '@vue/test-utils';
 
 import FlightSearch from '@/components/FlightSearch';
 
+import sinon from 'sinon';
+
 // karma - "test runner", watches for changes to specs/components
 // and re-runs our tests for us; finds all the '.spec.js' files
 // and runs the describe & it blocks within them
@@ -16,11 +18,22 @@ import FlightSearch from '@/components/FlightSearch';
 // it also lets us interact with our component, triggering clicks,
 // dropdown selections, text input, etc
 
-describe( '<FlightSearch>', () => {
+// sinon - lets us create 'fake functions' aka spies/stubs,
+// so we can give those fake functions to the component
+// to use and we can assert that the fake functions were called.
+// This is also called "mocking".
 
-  it( 'should render the correct contents', () => {
+// Our component is going to call 'this.$router.push()', so it's
+// that push method inside an object that we need to mock
+const $router = { push: sinon.spy()  }
 
-    const wrapper = mount(FlightSearch);
+xdescribe( '<FlightSearch>', () => {
+
+  it( 'should render the correct contents', async () => {
+
+    const wrapper = mount(FlightSearch, {
+      mocks: { $router } // provide our mock to the component, i.e. this.$router
+    });
 
     // basic example assertion: check that certain tags
     // appear on the page, with certain contents
@@ -41,19 +54,35 @@ describe( '<FlightSearch>', () => {
     const originOption = selects.at(0).findAll('option').at(1);
 
     // Simulate the user actually clicking on this option in the dropdown
-    originOption.setSelected();
+    // This is an async operation which returns a promise, so we either
+    // have to attach a .then() to it, and do our expect() assertions
+    // inside the .then() callback... or just use await! 😍
+    await originOption.setSelected();
     // Check that our state has updated to reflect this selection
     // console.log( 'new value of origin:', wrapper.vm.origin );
     expect( wrapper.vm.origin ).to.equal( originOption.text() );
 
 
     const destinationOption = selects.at(1).findAll('option').at(2);
-    destinationOption.setSelected(); // TODO: async? i expect this to break
+    await destinationOption.setSelected();
     expect( wrapper.vm.destination ).to.equal( destinationOption.text() ); // MEL
 
     // "DON'T TEST THE FRAMEWORK ITSELF!"
 
-    wrapper.find('button').trigger('click'); // simulate user click
+
+    // simulate user click
+    await wrapper.find('button').trigger('click');
+
+    // After clicking, we expect a specific route to
+    // have been pushed:
+    expect( $router.push ).to.have.been.calledWith(sinon.match({
+      name: 'SearchResults',
+      params: {
+        origin: originOption.text(),
+        destination: destinationOption.text()
+      }
+    }));
+
 
 
   }); // it
