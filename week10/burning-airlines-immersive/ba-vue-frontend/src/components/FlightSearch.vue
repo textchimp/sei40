@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2>Search Flights</h2>
+    <h2 class="header">Search Flights</h2>
 
     <label>Origin:</label>
-    <select v-model="origin">
+    <select v-model="origin" id="origin">
       <option value="">Please select:</option>
       <option>SYD</option>
       <option>MEL</option>
@@ -39,8 +39,8 @@
     data(){
       // Initialise the state of this app, just like in React
       return {
-        origin: 'SYD',
-        destination: 'MEL'
+        origin: '',
+        destination: ''
       };
     }, // data()
 
