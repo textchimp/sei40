@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import FlightSearch from '@/components/FlightSearch';
 import FlightSearchResults from '@/components/FlightSearchResults';
+import FlightDetails from '@/components/FlightDetails';
 
 // console.log( 'env', process.env.NODE_ENV );
 
@@ -31,6 +32,13 @@ export default new Router({
       path: '/search/:origin/:destination',
       name: 'SearchResults',
       component: FlightSearchResults,
+      props: true
+    },
+
+    {
+      path: '/flights/:id',
+      name: 'FlightDetails',
+      component: FlightDetails,
       props: true
     },
 

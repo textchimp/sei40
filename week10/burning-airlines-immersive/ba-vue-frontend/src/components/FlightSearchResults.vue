@@ -12,7 +12,7 @@
 
     <p v-if="flights.length === 0">Loading results...</p>
 
-    <div v-for="flight in flights" class="container result">
+    <div v-for="flight in flights" class="container result" @click="gotoFlight(flight.id)">
       <div>{{ flight.departure_date_formatted }}</div>
       <div>{{ flight.flight_number }}</div>
       <div>{{ flight.airplane.name }}</div>
@@ -45,6 +45,7 @@ export default {
     };
   }, // data
 
+
   // This function runs once when the component is added to the page,
   // just like React's componentDidMount
   mounted(){
@@ -57,6 +58,19 @@ export default {
     .catch( (err) => {
       console.dir( err );
     });
+
+  },
+
+  methods: {
+
+    gotoFlight( flightID ){    //   gotoFlight: function(){
+
+      this.$router.push({
+        name: 'FlightDetails',
+        params: { id: flightID }
+      });
+
+    }, // gotoFlight
 
   },
 
