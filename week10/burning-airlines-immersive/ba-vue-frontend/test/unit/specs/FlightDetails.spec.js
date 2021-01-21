@@ -26,10 +26,10 @@ const testFlight = {
   ]
 };
 
-// Create a fake stub for the axios.get which this component will use
+// Create a fake stub for the axios.get method which this component will use.
 // This 'stub' allows us to control what our fake version returns!
-// Because the real axios.get returns a promise which resolves to the API
-// data, and our component expects that, our fake version also has to
+// Because the real axios.get returns a promise which resolves to the server
+// response data, and our component expects that, our fake version also has to
 // return a resolved promise with a flight object in it - the same structure
 // of data which the Rails API endpoint would return, including the relevant
 // associations needed by the component.
@@ -47,21 +47,19 @@ describe('<FlightDetails>', () => {
 
   }); // beforeEach
 
+
+
   it('shows a loading message until the flight loads', async () => {
 
     expect( wrapper.props('id') ).to.equal( 1 );
-
     expect( wrapper.text() ).to.contain('Loading flight details');
 
     await wrapper.vm.$nextTick();  // wait for axios promise to resolve with the API data
 
     // console.log('flight', wrapper.vm.flight);
-
-    expect( wrapper.vm.flight ).to.deep.equal( testFlight );
+    expect( wrapper.vm.flight ).to.deep.equal( testFlight ); // Check state
 
     expect( wrapper.text() ).to.not.contain('Loading flight details');
-
-    // Check state
 
   }); // it shows a loading message
 
@@ -70,7 +68,7 @@ describe('<FlightDetails>', () => {
 
     await wrapper.vm.$nextTick(); // wait for axios result
 
-    expect( wrapper.find('h2.flight_number').text() ).to.equal( testFlight.flight_number );
+    expect( wrapper.find('h2.flight_number').text() ).to.contain( testFlight.flight_number );
 
     expect( wrapper.find('.departure_date').text() ).to.contain( testFlight.departure_date_formatted );
 

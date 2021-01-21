@@ -1,5 +1,7 @@
 class FlightsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def search
     flights = Flight.where( origin: params[:origin], destination: params[:destination] )
     render json: flights,
@@ -23,6 +25,27 @@ class FlightsController < ApplicationController
   end #show
 
   def create_reservation
+
+    reservation = Reservation.create(
+      row: params[:row],
+      col: params[:col],
+      flight_id: params[:id], # from the path /flights/:id/reservation
+      user_id: 19,  # JUST FOR TESTING! should come from @current_user
+      paid: false
+    )
+
+    # reservation = Reservation.create params
+
+    # send the reservation object back to the frontend
+    render json: reservation
+
   end # create_reservation
 
-end
+  # private
+  #
+  # def reservation_params
+  #   # params.require(:???)
+  #   # params.permit(:row, :col, :id, )
+  # end
+
+end # class FlightsController
