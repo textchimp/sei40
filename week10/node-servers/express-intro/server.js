@@ -15,32 +15,33 @@ app.set('view-engine', ejs);
 
 // MongoDB - NoSQL - no schemas, every row ('document') can have different fields! IT'S ANARCHY!
 //  - Our rows ('documents') are just JS objects! NESTED DATA!!!
-
+//
 // Other NoSQL: CouchDB, Google Firebase - store objects
-
-{
-  id: 2,
-  title: 'I love NoSQL',
-  body: '.....',
-  createdAt: '2020-...',
-  comments: [
-    {
-      id: 2234,
-      text: 'You are wrong, SQL forever!',
-      user: {
-        id: 12
-        name: 'OnlineDebater'
-      }
-    },
-    {
-      id: 123
-    }
-  ]
-}
-
+//
+// NESTED DATA in a document (row):
+// {
+//   id: 2,
+//   title: 'I love NoSQL',
+//   body: '.....',
+//   createdAt: '2020-...',
+//   comments: [
+//     {
+//       id: 2234,
+//       text: 'You are wrong, SQL forever!',
+//       user: {
+//         id: 12
+//         name: 'OnlineDebater'
+//       }
+//     },
+//     {
+//       id: 123
+//     }
+//   ]
+// }
+//
 //  - Rails: 'Validate on write' .... MongoDB - 'validate on read'
-
-// Mongoose - MongoDB + schemas, ORM  
+//
+// Mongoose - MongoDB + schemas, ORM
 
 
 // MERN Stack - Mongo Express React Node
