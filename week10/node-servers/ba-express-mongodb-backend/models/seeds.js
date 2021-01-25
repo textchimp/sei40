@@ -1,3 +1,42 @@
+const flights =  [
+  {
+    flight_number: 'BA123',
+    origin: 'SYD',
+    destination: 'MEL',
+    departure_date: new Date('2021-10-01T04:20:00Z'),
+    airplane: { name: '737', rows: 10, cols: 4  },
+    reservations: [
+      { row: 1, col: 1, user_id: 10 },
+      { row: 2, col: 2, user_id: 10 },
+      { row: 3, col: 3, user_id: 11 },
+    ] // reservations
+  }, // first flight
+  {
+    flight_number: 'BA456',
+    origin: 'SYD',
+    destination: 'MEL',
+    departure_date: new Date('2021-11-01T04:20:00Z'),
+    airplane: { name: '767', rows: 12, cols: 6  },
+    reservations: [
+      { row: 1, col: 1, user_id: 10 },
+      { row: 2, col: 2, user_id: 10 },
+      { row: 3, col: 3, user_id: 11 },
+    ] // reservations
+  }, // second flight
+  {
+    flight_number: 'BA789',
+    origin: 'SYD',
+    destination: 'SIN',
+    departure_date: new Date('2021-11-01T04:20:00Z'),
+    airplane: { name: '767', rows: 12, cols: 6  },
+    reservations: [
+      { row: 1, col: 1, user_id: 10 },
+      { row: 2, col: 2, user_id: 10 },
+      { row: 3, col: 3, user_id: 11 },
+    ] // reservations
+  }, // third flight
+];
+
 
 const mongoose = require('mongoose');
 
@@ -34,8 +73,15 @@ db.once('open', async () => {
   // Remember to wrap your 'await' code in try-catch blocks to catch errors!
 
   try {
-    const flights = await Flight.find();
-    console.log('flights', flights);
+
+    // 1. Empty the flights collection (table), just like Rails Flight.destroy_all
+    await Flight.deleteMany();
+
+    // 2. Insert the new flights
+    await Flight.create( flights ); // array of flights
+
+    const flightResults = await Flight.find();
+    console.log('flights', flightResults);
   } catch(err){
     console.log('Error finding flights:', err);
   }

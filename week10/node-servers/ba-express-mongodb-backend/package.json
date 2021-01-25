@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter=min test/",
+    "watch": "mocha --reporter=min -w test/",
+    "start": "nodemon server.js",
+    "debug": "ndb server.js",
+    "seed": "node models/seeds.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mocha": "^8.2.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
     "ndb": "^1.1.5",
