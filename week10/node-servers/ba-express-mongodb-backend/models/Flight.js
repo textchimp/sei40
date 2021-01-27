@@ -20,10 +20,17 @@ const FlightSchema = new mongoose.Schema({
       row: Number,
       col: Number,
       // reservations belong to a user
-      user: {
-        type: mongoose.Schema.Types.ObjectID,
-        ref: 'User' // this creates a kind of association to the User model
-      }
+
+      user_id: Number
+
+      // TODO: MAKE THIS WORK:
+      //
+      // user: {
+      //   type: mongoose.Schema.Types.ObjectID,
+      //   ref: 'User' // this creates a kind of association to the User model
+      // }
+
+
     }
   ]
 

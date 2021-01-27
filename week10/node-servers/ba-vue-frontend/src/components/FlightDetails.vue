@@ -44,7 +44,7 @@
       <ReservationConfirm
         v-if="selectedSeat.row !== null"
         :seat="selectedSeat"
-        :flightID="flight.id"
+        :flightID="flight._id"
         v-on:seatBooked="updateReservations"
       />
 
