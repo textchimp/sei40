@@ -20,7 +20,7 @@ app.createPlane = () => {
 
   plane.position.set( 15, 0, 0 );
   plane.rotation.x = -0.5 * Math.PI;  // because of maths
-  plane.receiveShadow = true; // shadows are cast onto this!
+  // plane.receiveShadow = true; // shadows are cast onto this!
 
   return plane;
 
@@ -31,9 +31,9 @@ app.createSpotlight = () => {
 
   const light = new THREE.SpotLight( 0xFFFFFF );
   light.position.set( -10, 60, 10 );
-  light.castShadow = true;
-  light.shadow.mapSize.width = 2048;
-  light.shadow.mapSize.height = 2048;
+  // light.castShadow = true;
+  // light.shadow.mapSize.width = 2048;
+  // light.shadow.mapSize.height = 2048;
 
   return light;
 
@@ -42,15 +42,40 @@ app.createSpotlight = () => {
 
 app.createCube = () => {
 
-  const cubeGeometry = new THREE.BoxGeometry( 4, 4, 4 );
+  const cubeGeometry = new THREE.BoxGeometry(
+     // THREE.Math.randInt(4, 400), // random x size
+     // THREE.Math.randInt(4, 400), // random x size
+     4,
+     4,
+     4
+   );
   const cubeMaterial = new THREE.MeshLambertMaterial({
     color: 0xFF8F00,
     // wireframe: true
   });
 
   const cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
-  cube.position.set( -4, 15, 0 );
-  cube.castShadow = true;
+
+  // cube.position.set( -4, 15, 0 );
+  const range = 50;
+  cube.position.set(
+    THREE.Math.randInt(-range, range),
+    THREE.Math.randInt(-range, range),
+    THREE.Math.randInt(-range, range),
+  );
+
+  // cube.userData.rotationSpeed = Math.random() * 0.05;
+
+  // cube.rotation.x = Math.random();
+  // cube.rotation.y = Math.random();
+
+  cube.material.color.setHSL(
+    Math.random(),
+    1.0, // Math.random(),
+    0.5
+  );
+
+  // cube.castShadow = true;
 
   return cube;
 
@@ -60,20 +85,82 @@ app.createCube = () => {
 app.createSphere = () => {
 
   const sphereGeometry = new THREE.SphereGeometry(
-    6, // radius
+    30, // radius
     40, // number of triangle segments on the X axis
     40, // number of triangle segments on the Y axis
   );
 
   const sphereMaterial = new THREE.MeshPhongMaterial({
-    color: 0x039BE5
+    color: 0xFFFFFF,
+    map: THREE.ImageUtils.loadTexture('img/earth.jpg'),
+    // map: THREE.ImageUtils.loadTexture('img/el.png'),
+    side: THREE.DoubleSide
   });
 
   const sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-  sphere.position.set( 20, 6, 2 );
-  sphere.castShadow = true;
+  sphere.position.set( 0, 0, 0 );
+  // sphere.castShadow = true;
 
   return sphere;
 
 
 }; // createSphere
+
+
+app.createParticleSystem = () => {
+
+  const particles = new THREE.BufferGeometry();
+  const distrib = app.controls.particleDistributionRange;
+
+  const positions = [];
+  const velocities = [];
+
+  for( let i = 0; i < app.controls.numParticles; i++ ){
+
+    // Create a particle and give it a random position
+    positions.push(
+      THREE.Math.randInt(-distrib, distrib), // x
+      // THREE.Math.randInt(-distrib, distrib), // y
+      100, // fixed y
+      THREE.Math.randInt(-distrib, distrib)  // z
+    );
+
+    velocities.push(
+      0,
+      0,
+      0
+      // Math.random() - 0.5,
+      // Math.random() - 0.5,
+      // Math.random() - 0.5
+    );
+
+  } // for
+
+  particles.setAttribute(
+    'position',
+    new THREE.Float32BufferAttribute( positions, 3 )
+  );
+
+  particles.setAttribute(
+    'velocity',
+    new THREE.Float32BufferAttribute( velocities, 3 )
+  );
+
+
+  const particleMaterial = new THREE.PointsMaterial({
+    color: 0xFFFFFF,
+    size: 6,
+    map: THREE.ImageUtils.loadTexture('img/snowflake.png'),
+    blending: THREE.AdditiveBlending,
+    transparent: true,
+    alphaTest: 0.5
+  });
+
+  const particleSystem = new THREE.Points(
+    particles, // geometry
+    particleMaterial // the image we show for each particle
+  );
+
+  return particleSystem;
+
+}; // createParticleSystem

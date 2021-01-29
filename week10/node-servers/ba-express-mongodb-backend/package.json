@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha --reporter=min test/",
     "watch": "mocha --reporter=min -w test/",
-    "start": "nodemon server.js",
-    "debug": "ndb server.js",
+    "start": "nodemon server-graphql.js",
+    "debug": "ndb server-graphql.js",
     "seed": "node models/seeds.js"
   },
   "keywords": [],
@@ -18,6 +18,8 @@
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
     "mocha": "^8.2.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
