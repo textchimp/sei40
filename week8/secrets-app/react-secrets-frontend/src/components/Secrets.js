@@ -7,7 +7,7 @@ import axios from 'axios';
 import SecretsForm from './SecretsForm';
 
 // const RAILS_SECRETS_BASE_URL = 'http://localhost:3000/secrets';
-const RAILS_SECRETS_BASE_URL = 'http://aeb6a8c3d420.ngrok.io/secrets';
+const RAILS_SECRETS_BASE_URL = 'http://localhost:3000/secrets';
 
 class Secrets extends React.Component {
 
@@ -38,7 +38,8 @@ class Secrets extends React.Component {
     // Poll the server: keep refreshing the list of secrets every few
     // seconds, so the user will automatically see any new secrets added
     // by any users of the app
-    window.setInterval( this.fetchSecrets, 2000 );
+
+    // window.setInterval( this.fetchSecrets, 2000 );
 
   } // componentDidMount
 

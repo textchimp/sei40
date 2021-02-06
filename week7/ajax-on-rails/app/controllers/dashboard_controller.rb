@@ -49,6 +49,9 @@ class DashboardController < ApplicationController
 
 
   def dogs_index
+    # deal with CORS errors:
+     headers['Access-Control-Allow-Origin'] = '*'
+
     render json: Dog.all
   end
 

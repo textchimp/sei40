@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SEi: Getting Betterer</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+		.popup{
+			position: absolute;
+			top: 300px;
+			left: 300px;
+			width: 300px;
+			height: 80px;
+			padding: 40px;
+			/* display: inline-block; */
+			display: none !important;
+			background-color: #414549;
+			border: 2px solid white;
+		}
+		.smally li{
+			font-size: 20pt !important;
+			line-height: 2.1rem;
+		}
+		 .controls { display: none !important; }
+		  @-webkit-keyframes blink {80%{opacity:0.0}}em{-webkit-animation:blink 1s steps(1,end) 0s infinite};
+
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		        <img src="img/teacher-transparent.png" alt="" class="pointy" style="border:none;background:transparent;width:480px;float:right;box-shadow:none;position:absolute;bottom:0;right:-1%">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Getting Betterer</h1>
+					<h3>Dev Life After SEi</h3>
+					<img src="img/ga_logo.png" alt="" style="border:none;background:transparent;width:100px;float:left;">
+				</section>
+
+				<section>
+					<h2>We're not fussed about<br>today's final projects</h2>
+					<h1 class="fragment">The real final project is inside you</h1>
+					<h1 class="fragment">And it will never<br>be finished</h1>
+				</section>
+
+				<section>
+					<h2>You all now know enough to be useful</h2>
+					<h3 class="fragment">but</h3>
+					<h2 class="fragment">You have so much more to learn</h2>
+					<h1 class="fragment">Forever</h1>
+					<h3 class="fragment">(We all do)</h3>
+					<h3 class="fragment">(This is a good thing)</h3>
+					<br>
+					<h2 class="fragment" style="-webkit-animation: blink 1s steps(1,end) 0s infinite">People will pay you to learn</h2>
+				</section>
+
+				<section>
+					<h2>Completely ready for employment</h2>
+					<h3 class="fragment">(lol)</h3>
+					<br>
+					<div class="fragment">
+						<h4>The problem:</h4>
+						<h1>Impostor Syndrome</h1>
+					</div>
+					<br>
+					<div class="fragment">
+						<h4>A solution:</h4>
+						<h1>Fake it til you make it</h1>
+					</div>
+				</section>
+
+				<!-- <section>
+					<h2>The best thing we've taught you</h2>
+					<h3 class="fragment">(we hope)</h3>
+					<h2 class="fragment">How to debug</h2>
+					<br>
+					<p class="fragment">Everything else comes with practice, but<br> practice is easier when you can debug well<br><span class="">and patiently</span> <span class="">and calmly</span> <span class="">and cheerfully.</span></p>
+					<p class="fragment">People will <strong>love</strong> you for fixing their broken stuff.</p>
+				</section> -->
+
+				<section>
+					<h3>The most useful thing we've shown you:</h3>
+					<h3 class="fragment">(we hope)</h3>
+					<br>
+					<h2 class="fragment">How to figure things out</h2>
+					<br>
+					<h3 class="fragment">1. How to learn</h2>
+					<h3 class="fragment">2. How to debug</h2>
+					<p class="fragment">Everything else comes with practice, but<br> practice is easier when you can debug well<br><span class="">and patiently</span> <span class="">and calmly</span> <span class="">and cheerfully.</span></p>
+					<br>
+					<p class="fragment">People will <strong>love</strong> you for fixing their broken stuff.</p>
+				</section>
+
+
+				<section>
+					<h2>What Now?</h2>
+					<h3 class="fragment">The best part of the course is<br>what happens after the course</h3>
+
+					<ul>
+						<li class="fragment">Don't stop coding: <span class="fragment">practice</span></li>
+						<li class="fragment">Learn new languages <span class="fragment">(it makes you better at your existing languages)</span></li>
+						<li class="fragment">Learn another editor</li>
+						<li class="fragment">Participate: <span class="fragment">meetups, conferences, Twitter</span></li>
+						<li class="fragment">Stay in touch with each other and with<br> the alumni community</li>
+						<li class="fragment">Enjoy<span class="fragment">: It's all easier if you enjoy it</span></li>
+						<li class="fragment">Get great: blow my mind</li>
+						<li class="fragment">Read books<span class="fragment">, you freaking illiterates</span></li>
+						<li class="fragment">Find mentor(s)</li>
+					</ul>
+				</section>
+
+				<section class="smally">
+					<h1>PASSED OVER</h1>
+					<h3>Stuff we didn't get time to cover in the course</h3>
+					<h4 id="popups">(but which you should know about)</h4>
+					<ul>
+						<!-- <li><a href="https://phoboes.gitbooks.io/wdi-21/content/week_10/wk10_day01.html">Responsive</a> <a href="https://internetingishard.com/html-and-css/responsive-design/">design</a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media Queries</a></li> -->
+						<li><a href="https://www.w3.org/WAI/gettingstarted/tips/index">Accessibility</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS</a> <a href="https://robots.thoughtbot.com/css-animation-for-beginners">animations</a>, <a href="https://phoboes.gitbooks.io/wdi-21/content/week_10/wk10_day05.html">SVG animations</a>, <a href="https://phoboes.gitbooks.io/wdi-21/content/modules/bounceAnimateSweet.html">animation libraries</a></<li>
+						<li><a href="https://www.gatsbyjs.org/">Server-Side-Rendering</a> of SPAs; <a href="https://phoboes.gitbooks.io/wdi-21/content/modules/mailers.html">Mailers</a></li>
+						<li>Advanced <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">git</a>, Graphical git</li>
+						<li>Advanced React: State Management with <a href="https://redux.js.org/introduction/getting-started/">Redux</a>, <a href="https://reactjs.org/docs/context.html">Context API</a>,<br><a href="https://reactjs.org/docs/higher-order-components.html">Higher Order Components</a>...</li>
+
+						<li>Web scraping (i.e. with <a href="https://phoboes.gitbooks.io/wdi-21/content/modules/nokogiri.html">Nokogiri</a>)</li>
+						<li>Advanced Bash shell <a href="https://phoboes.gitbooks.io/wdi-21/content/modules/bash.html">scripting</a>; <a href="https://developers.google.com/web/tools/puppeteer">browser scripting</a> for <a href="https://www.cypress.io/">E2E testing</a></li>
+						<li>Linting: <a href="https://eslint.org/">ESLint</a>, <a href="https://github.com/prettier/prettier">Prettier</a>, <a href="https://github.com/rubocop-hq/rubocop">Rubocop</a>...</li>
+						<li>DevOps: <a href="https://cloud.google.com/compute/docs/quickstart-linux">Google Cloud Services</a>, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html">AWS</a>, Continuous Integration (i.e. <a href="https://travis-ci.org/">Travis</a>), Microservices, Serverless, <a href="https://www.docker.com/why-docker">Docker</a>, Kubernetes, etc, etc, etc... </li>
+						<li>Javascript static type libraries: <a href="https://www.typescriptlang.org/">Typescript</a>, <a href="https://flow.org/">Flow</a>
+						<!-- NAILED IT <li>Javascript TDD: <a href="https://mochajs.org/">Mocha</a>, <a href="https://jasmine.github.io/">Jasmine</a>, <a href="https://facebook.github.io/jest/">Jest</a> -->
+						<li>Advanced <a href="https://www.codenewbie.org/basecs">comp.sci</a> <a href="https://medium.com/basecs">topics</a></li>
+						<!-- <li id="popups">etc...</li> -->
+					</ul>
+
+					<!-- <div class="popup" id="popup1">
+           Websockets
+					</div>
+
+					<div class="popup" id="popup2">
+           Advanced React: Redux, HOCs...
+					</div>
+
+					<div class="popup" id="popup2">
+           Websockets
+					</div>
+
+					<div class="popup" id="popup2">
+           Websockets
+					</div> -->
+
+				</section>
+
+				<section>
+					<h1>Practice</h1>
+					<h3 class="fragment">Code Every Day</h3>
+					<ul>
+					  <li class="fragment"><a href="http://exercism.io/">exercism.io</a></li>
+					  <li class="fragment"><a href="http://rubykoans.com/">Koans</a></li>
+					  <li class="fragment"><a href="http://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a></li>
+					  <li class="fragment"><a href="http://ejohn.org/blog/write-code-every-day/">John Resig "Write code every day"</a></li>
+						<li class="fragment">And of course:</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Passion Projects:</h1>
+					<h2>Ride the rainbow of fun</h2>
+          <br>
+					<h3 class="fragment smally">Find something that compels<br>you to code, beyond a job </h2>
+
+						<ul>
+							<li class="fragment">No one can tell you what to do</li>
+							<li class="fragment"><strong>Write large programs</strong> (unique issues)</li>
+						</ul>
+        <br>
+        <br>
+						<ul class="smally">
+					  <li class="fragment"><a href="http://thecodingtrain.com/">Coding Train</a>, <a href="https://www.youtube.com/user/codingmath">Coding Math</a></li>
+						<li class="fragment"><a href="https://github.com/terkelg/awesome-creative-coding">Creative Coding resources</a></li>
+						<li class="fragment">Follow: <a href="https://www.instagram.com/zach.lieberman/">Zach</a> <a href="https://twitter.com/zachlieberman?lang=en">Lieberman</a>, <a href="http://inconvergent.net/generative/">Anders</a> <a href="https://twitter.com/inconvergent">Hoff</a>,<br> <a href=https://twitter.com/algoritmic">@algoritmic</a>, <a href="https://twitter.com/GalaxyKate">@GalaxyKate</a>, <a href="https://twitter.com/mrdoob">@mrdoob</a>, <br><a href="https://twitter.com/inversed_ru">@inversed_ru</a>, <a href="https://twitter.com/sasj_nl">@sasj_nl</a>
+						</li>
+					</ul>
+					<br>
+					<br>
+					<h3 class="fragment">'Always Be Iterating!'</h3>
+					<!-- <h1 class="fragment">$PROFIT$</h1> -->
+				</section>
+
+				<section>
+					<h2>New Languages</h2>
+					<ul>
+						<li class="fragment"><a href="https://www.python.org/">Python</a></li>
+						<li class="fragment"><a href="https://elixir-lang.org/">Elixir</a></li>
+						<li class="fragment"><a href="http://golang.org/">Go</a></li>
+						<li class="fragment"><a href="https://www.rust-lang.org/en-US/">Rust</a></li>
+						<li class="fragment"><a href="https://www.braveclojure.com/clojure-for-the-brave-and-true/">Clojure</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Editors</h2>
+					<ul>
+						<li class="fragment"><a href="http://www.vim.org/">vi (vim)</a>: online <a href="http://vim-adventures.com/">games</a> and tutors</li>
+						<li class="fragment"><a href="http://en.wikipedia.org/wiki/Emacs">emacs</a></li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>Culture</h2>
+					<h3 class="fragment"><a href="http://www.catb.org/jargon/html/index.html">Jargon File</a></h3>
+					<h3 class="fragment">The IT Crowd</h3>
+					<h3 class="fragment">Silicon Valley</h3>
+					<h3 class="fragment">Mr Robot</h3>
+					<h3 class="fragment">Etc...</h3>
+				</section>
+
+				<section>
+					<h2>Passsive Consumption</h2>
+					<ul>
+						<li class="fragment"><a href="http://twitter.com/edwardawkward">Twitter </a></li>
+						<li class="fragment">Email: <a href="http://rubyweekly.com/">Ruby Weekly</a></li>
+						<li class="fragment">Email: <a href="http://javascriptweekly.com/">Javascript Weekly</a></li>
+						<li class="fragment">Email: <a href="http://nodeweekly.com/">Node Weekly</a>? <a href="http://reactweekly.com/">React Weekly</a>?</li>
+						<li class="fragment"><a href="https://github.com/explore">Github</a></li>
+						<li class="fragment">Podcasts: <a href="https://syntax.fm/">Syntax.fm</a>, <a href="https://www.codenewbie.org/">CodeNewbie</a>, <a href="http://frontendhappyhour.com/">Front End Happy Hour</a>, <a href="https://changelog.com/jsparty">JS Party</a>, <a href="http://bikeshed.fm/">The Bike Shed</a>, <a href="https://www.codingblocks.net/">Coding Blocks</a>, <a href="http://www.programmingthrowdown.com/">Programming Throwdown</a>
+						</li>
+						<!-- <li class="fragment"><a href="http://railscasts.com/">Railscasts</a></li> -->
+					</ul>
+				</section>
+
+				<section>
+					<h2>Meetups</h2>
+					<ul>
+						<li class="fragment"><a href="http://www.sydjs.com/">SydJS</a></li>
+						<li class="fragment"><a href="http://ruby.org.au/meetups/syd.html">RORO</a></li>
+						<li class="fragment"><a href="https://www.meetup.com/SydCSS/">SydCSS</a></li>
+						<li class="fragment">Hackathons/Hack Nights</li>
+						<li class="fragment">GA Events <span class="fragment">(e.g. "happy" hour)</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Conferences</h2>
+					<ul>
+						<li class="fragment">Attend! (Ideally, get paid to)</li>
+						<li class="fragment">JSConf.au</li>
+						<li class="fragment">Camp JS</li>
+						<li class="fragment">RailsCamp</li>
+						<li class="fragment">Rails Conf</li>
+						<li class="fragment">International</li>
+						<li class="fragment">Videos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>IRC</h2>
+					<ul>
+						<li class="fragment"><a href="http://webchat.freenode.net/">Freenode</a></li>
+						<li class="fragment">#jQuery (<a href="http://irc.jquery.org/irc-help/">Help Guide</a>)</li>
+						<li class="fragment">Alumni channels on Slack</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Each Other</h2>
+					<ul>
+						<li class="fragment">You're a decent bunch</li>
+						<li class="fragment">Stay in touch</li>
+						<li class="fragment">You are each others' best<br>resources</li>
+						<li class="fragment">Tell me about your code tests<br>and your fancy new tech stacks</li>
+					</ul>
+				</section>
+
+<!--
+				<section>
+					<h2>Don't Ask To Ask</h2>
+					<p class="fragment">Don't ask "can I ask you a question?"</p>
+					<h2 class="fragment">Help us to help you</h2>
+					<p class="fragment">Get to the point: tell us in detail how we can help you</p>
+					<p class="fragment">You can ask how we are later</p>
+					<h1 class="fragment">Don't be so fucking polite</h1>
+				</section>
+ -->
+				<section>
+					<h1>Books</h2>
+					<h3><a href="https://frontendmasters.com/books/front-end-handbook/2019/">Front-end Developer Handbook 2019</a></h3>
+					<h3><a href="http://oreilly.com/">O'Reilly</a></h3>
+				</section>
+
+				<section>
+					<h2>Books</h2>
+					<h3>Ruby</h3>
+					<ul>
+						<li><a href="https://pragprog.com/book/rails5/agile-web-development-with-rails-5">Agile Web Development with Rails 5</a> (shopping carts/ecommerce)
+						<li><a href="http://pragprog.com/book/ruby4/programming-ruby-1-9-2-0">Programming Ruby 1.9/2.0 by Dave Thomas 4th Edition</a></li>
+						<li><a href="http://pragprog.com/book/ppmetr/metaprogramming-ruby">Metaprogramming in Ruby</a></li>
+						<li><a href="http://eloquentruby.com/about/">Eloquent Ruby</a></li>
+						<li><a href="http://www.manning.com/black2/">The Well Rounded Rubyist</a></li>
+						<li><a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a></li>
+						<li><a href="https://leanpub.com/everydayrailsrspec">Everyday Rails Testing with RSpec</a></li>
+						<li><a href="http://www.amazon.com/Rails-Edition-Addison-Wesley-Professional-Series/dp/0321601661">Rails 5 Way</a></li>
+
+					</ul>
+				</section>
+
+				<!-- <section>
+					<h2>Books</h2>
+					<h3><a href="https://pragprog.com/book/rails5/agile-web-development-with-rails-5">Agile Web Development with Rails 5</a></h3>
+					<h4>(Shopping carts and things)</h4>
+				</section> -->
+
+				<section>
+					<h2>Books</h2>
+					<h3>Javascript</h3>
+					<ul>
+						<li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+						<li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript: The Good Parts</a></li>
+						<li><a href="http://speakingjs.com/">Speaking Javascript</a></li>
+						<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a></li>
+						<li><a href="http://shop.oreilly.com/product/0636920028857.do">Functional Javascript</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Books</h2>
+					<h3><a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a></h3>
+					<h4>(Recursion and functional programming)</h4>
+				</section>
+
+				<section>
+					<h2>Books</h2>
+					<h3><a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">7 Languages in Seven Weeks</a></h3>
+				</section>
+
+				<section>
+					<h1>Maths/Logic/AI Books</h1>
+          <br>
+          <h3>Computers are to mathematics<br>as the microscope is to biology</h3>
+          <br>
+					<ul>
+					  <li>G&#246;del, Escher, Bach: An Eternal Golden Braid</li>
+					  <li>A Universal History of Numbers</li>
+					  <li>Everything And More: A Compact History of Infinity</li>
+						<li>Mind Tools</li>
+						<li>Complexity: A Guided Tour</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fiction</h2>
+					<ul>
+						<li>William Gibson: Blue Ant Trilogy</li>
+						<li>Neal Stephenson: Cryptonomicon, Snow Crash,<br>Baroque Cycle</li>
+						<li>Greg Egan: Permutation City, Luminous</li>
+					  <li>Rudy Rucker: Software, Wetware,<br>Freeware, Realware</li>
+					  <li>Stanislaw Lem: The Cyberiad</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Books</h2>
+					<h3>General Advice</h3>
+					<ul>
+						<li><a href="https://martinfowler.com/books/refactoring.html"><strong>Refactoring (2nd ed.)</strong></a></li>
+						<li><a href="https://www.goodreads.com/en/book/show/39996759-a-philosophy-of-software-design">A Philosophy of Software Design</a> (<a href="https://www.youtube.com/watch?v=bmSAYlu0NcY">Video Summary</a>)</li>
+						<li><a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">The Structure and Interpretation of Computer Programs</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Coders_at_work">Coders at Work</a></li>
+						<li><a href="http://cc2e.com/">Code Complete</a></li>
+						<li><a href="http://www.pearsonhighered.com/educator/product/Clean-Coder-The-A-Code-of-Conduct-for-Professional-Programmers/9780137081073.page">The Clean Coder</a></li>
+						<li><a href="http://catb.org/esr/writings/taoup/">The Art of Unix Programming</a></li>
+
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>Books</h2>
+					<h3>Philosophical</h3>
+					<ul>
+						<li>Aforementioed GEB (Hofstadter); see also Daniel Dennett</li>
+						<li>Marshall Mcluhan: Understanding Media, Gutenberg Galaxy</li>
+						<li>James Gleick: The Information</li>
+						<li>The Annotated Turing</li>
+<!--small>
+						<li class="fragment">Computers were designed to model the human mind</li>
+						<li class="fragment">For a long time they were dumb slaves to automation</li>
+						<li class="fragment">Now we're trying to make them minds in their own right</li>
+</small-->
+					</ul>
+				</section>
+<!--
+				<section>
+					<h2>Books</h2>
+					<blockquote style="text-align:left;padding:1em">
+						The best book on programming for the layman is 'Alice in Wonderland'; but that's because it's the best book on anything for the layman.<br><br>
+						&mdash; Alan Perlis
+					</blockquote>
+				</section>
+				<section>
+					<blockquote style="text-align:left;padding:1em">
+Never imagine yourself not to be otherwise than what it might appear to others that what you were or might have been was not otherwise than what you had been would have appeared to them to be otherwise.<br><br> &mdash; The Duchess
+					</blockquote>
+				</section>
+</section> -->
+
+<!-- <section>
+				<section>
+					<img class="fragment" src="img/jonestown.jpg">
+				</section>
+				<section>
+					<h2>If you can't be cynical</h2>
+					<h2 class="fragment">Be skeptical</h2>
+					<h3 class="fragment">Don't drink the kool-aid</h3>
+				</section>
+</section> -->
+
+				<section>
+					<h2>Getting great</h2>
+					<ul>
+						<li class="fragment">Read code</li>
+						<li class="fragment">Read books about code</li>
+						<li class="fragment">Find your own reasons to code</li>
+						<li class="fragment"><span>Kindly</span>, <span class="fragment">patiently,</span> <span class="fragment">gently</span> <span class="fragment">help<br>other people with debugging</span></li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h1>WHAT IS A INTERNET?</h1>
+						<h2 class="fragment">What are we actually building here?</h2>
+					<ul>
+						<li class="fragment">Maintain a healthy skepticism!</li>
+						<li class="fragment"><strong>Radical generosity</strong>, openness, sharing, learning, lols</li>
+						<li class="fragment">Transcending isolation</li>
+						<li class="fragment">Evolution of language: ever richer forms of communication</li>
+						<li class="fragment">Something weird and special is going on</li>
+						<li class="fragment">It's a privilege to be a part of it</li>
+						<li class="fragment">You are the caretakers of it now; keep it <a href="https://www.youtube.com/watch?v=T_5dpw5dRNY">open</a></li>
+					</ul>
+					<br><br>
+					<div class="fragment">
+	          <h3>""History is a race between <br>education and catastrophe.""</h3>
+						<h4>—H.G. Wells</h4>
+					</div>
+				</section>
+
+				<section>
+					<style>
+					.marq,.salute{
+						display: inline-block
+					}
+					</style>
+					<center>
+						<h1 class="marq"><span class="cla">Class</span></h1>&nbsp;&nbsp;
+					<h1 class="marq"><span class="dis">Dismissed</span></h1>
+
+					<img class="salute" src="img/salute.gif">
+					<div id="showy" style="display: none;">
+						<h1 class="marq"><span class="cla2">Class</span></h1>
+						<h1 class="marq"><span class="dis2">Dismissed</span></h1>
+					</div>
+				</center>
+
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script>
+       let popupCounter = 1;
+			$('#popups').click(function(){
+				$('#popup'+popupCounter).show().css('display', 'inline-block').css('position');
+				popupCounter++;
+				console.log(popupCounter);
+			});
+
+
+	    $('.salute').click(function(){
+				$(this).wrap('<marquee scrollamount="30" direction="right" behavior="alternate" width="800"></marquee>');
+				$('.pointy').wrap('<marquee speed="40" direction="left"></marquee>');
+				$('.cla').wrap('<marquee scrollamount="20" direction="up"></marquee>');
+				$('.dis').wrap('<marquee scrollamount="20" direction="down"></marquee>');
+				$('#showy').css('display', 'inline-block');
+				$('.cla2').wrap('<marquee scrollamount="20" direction="left"></marquee>');
+				$('.dis2').wrap('<marquee scrollamount="20" direction="right"></marquee>');
+			});
+
+			$(document).ready(function () {
+				$('a[href^="http"]').attr('target', '_blank');
+
+
+
+			});
+		</script>
+	</body>
+</html>

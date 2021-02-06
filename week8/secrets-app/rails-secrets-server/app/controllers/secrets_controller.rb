@@ -24,7 +24,25 @@ class SecretsController < ApplicationController
     headers['Access-Control-Allow-Origin'] = '*'
 
     secret = Secret.create content: params[:content]
-    render json: secret
-  end
+
+    if secret.persisted?
+      # success
+
+      SecretMailer.welcome(
+        {
+          email: 'textchimp@gmail.com',
+          name: 'Freddy Citizen'
+        },
+        params[:content]
+      ).deliver_now
+
+      render json: secret
+
+    else
+      render json: { error: 'could not save secret' }
+    end
+
+
+  end # create
 
 end

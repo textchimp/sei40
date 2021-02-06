@@ -1,2 +1,43 @@
-<h1>Mixtapes#index</h1>
-<p>Find me in app/views/mixtapes/index.html.erb</p>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeEA5GdKZHKa_YQQ4kPOhAbUXJbzwfM5I&callback=initMap&libraries=&v=weekly" defer></script>
+
+<style>
+  #map {
+    width: 50vw;
+    height: 50vw;
+  }
+</style>
+
+<script>
+
+// const firstMixtape = { lat: <%= @mixtapes.last.latitude  %>, lng: <%= @mixtapes.last.longitude %> };
+
+const mixtapes = <%== @mixtapes.to_json %>;
+
+
+// TODO: Look at examples of calculating a "Bounding Box" for all the markers you add, and then centering and zooming the map to show all markers within bounding box
+
+function initMap() {
+  // const myLatLng = { lat: -25.363, lng: 131.044 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: { lat: mixtapes[mixtapes.length-1].latitude, lng: mixtapes[mixtapes.length-1].longitude }
+  });
+
+  for(let i = 0; i < mixtapes.length; i++ ){
+    const mixtape = mixtapes[i];
+    new google.maps.Marker({
+      position: { lat: mixtape.latitude, lng: mixtape.longitude },
+      map,
+      title: mixtape.title,
+    });
+  } // for
+
+
+}
+</script>
+
+<h1>
+  Mixtapes Near Me! (whatever that means)
+</h1>
+
+<div id="map"></div>
